@@ -1,13 +1,10 @@
 import Config
 
-# database_url = System.get_env("DATABASE_URL")
-
 config :tinker, Tinker.Repo,
   username: "postgres",
   password: "postgres",
   database: "tinker_dev",
   hostname: "localhost",
-  # url: database_url,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
