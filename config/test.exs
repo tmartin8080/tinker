@@ -17,3 +17,6 @@ config :logger, level: :warn
 config :stream_data,
   min_runs: 50,
   max_runs: 50
+
+# test.exs
+config :tinker, search_client: Search.ClientMock

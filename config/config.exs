@@ -16,4 +16,7 @@ config :logger, :console,
 
 config :phoenix, :json_library, Jason
 
+# config.exs
+config :tinker, search_client: Search.Client
+
 import_config "#{Mix.env()}.exs"
