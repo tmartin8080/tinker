@@ -7,11 +7,13 @@ defmodule Tinker.Acronym.PropertyTest do
 
   # mix test.watch --only property
   # https://hexdocs.pm/stream_data/ExUnitProperties.html#module-shrinking
+  #
+  # Example of a Factory
   property "works with many different phrases" do
     check all(
-            a <- string(:ascii, min_length: 1, max_length: 20),
-            b <- string(:ascii, min_length: 1, max_length: 20),
-            c <- string(:ascii, min_length: 1, max_length: 20),
+            a <- string(:ascii, min_length: 3, max_length: 20),
+            b <- string(:ascii, min_length: 3, max_length: 20),
+            c <- string(:ascii, min_length: 3, max_length: 20),
             phrase = "#{a} #{b} #{c}",
             min_runs: 10,
             max_runs: 10
